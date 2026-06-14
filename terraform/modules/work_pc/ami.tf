@@ -16,7 +16,7 @@ data "aws_ami" "master" {
   filter {
     name = "name"
     values = [
-      "ubuntu/images/hvm-ssd/ubuntu-*-${var.work_pc.ubuntu_version}-${local.arch}-server-*"
+      "ubuntu-pro-server/images/hvm-ssd-*/ubuntu-pro-server-*-${var.work_pc.ubuntu_version}-${local.arch}-pro-server-*"
     ]
   }
 

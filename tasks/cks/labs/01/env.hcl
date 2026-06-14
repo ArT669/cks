@@ -1,5 +1,5 @@
 locals {
-  region = "eu-north-1"
+  region = "il-central-1"
   aws    = "default"
   prefix = "cks-lab"
   tags = {
@@ -7,15 +7,14 @@ locals {
     "env_type"        = "dev"
     "manage"          = "terraform"
     "cost_allocation" = "dev"
-    "owner"           = "viktoruj@gmail.com"
   }
   k8_version           = "1.28.0"
   node_type            = "spot"
   runtime              = "containerd" # docker  , cri-o  , containerd ( need test it )
-  instance_type        = "t4g.medium"
-  instance_type_worker = "t4g.small"
+  instance_type        = "t4g.small"
+  instance_type_worker = "t4g.micro"
   key_name             = ""
-  ubuntu_version       = "20.04"
+  ubuntu_version       = "24.04"
   ami_id               = ""
   root_volume = {
     type = "gp3"
